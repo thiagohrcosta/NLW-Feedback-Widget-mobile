@@ -1,12 +1,14 @@
 import React from 'react';
-import { View } from 'react-native';
+import { View, Text } from 'react-native';
 
 import { styles } from './styles';
 
 export function Copyright() {
   return (
-    <View style={styles.container}>
-
+    <View>
+      <Text style={styles.text}>
+        2022. Feito por Thiago H.R.Costa
+      </Text>
     </View>
   )
 }
