@@ -11,6 +11,8 @@ import { theme } from "../../theme";
 import { styles } from "./styles";
 
 import { FeedbackTypes } from '../../componetns/Widget';
+import { ScreenshotButton } from '../../componetns/ScreenshotButton';
+
 import { feedbackTypes } from '../../utils/feedbackTypes';
 
 interface Props {
@@ -47,6 +49,14 @@ export function Form({ feedbackType }: Props) {
         placeholder="Algo não está funcionando bem? Queremos corrigir. Conte com detalhes o que está acontecendo."
         placeholderTextColor={theme.colors.text_secondary}
       />
+
+      <View style={styles.footer}>
+        <ScreenshotButton 
+          onTakeShot={() => {}}
+          onRemoveShot={() => {}}
+          screenshot=""
+        />
+      </View>
     </View>
   )
 }
