@@ -10,8 +10,9 @@ import {
 import { theme } from "../../theme";
 import { styles } from "./styles";
 
-import { FeedbackTypes } from '../../componetns/Widget';
-import { ScreenshotButton } from '../../componetns/ScreenshotButton';
+import { FeedbackTypes } from '../Widget';
+import { Button } from '../Buttom';
+import { ScreenshotButton } from '../ScreenshotButton';
 
 import { feedbackTypes } from '../../utils/feedbackTypes';
 
@@ -56,6 +57,7 @@ export function Form({ feedbackType }: Props) {
           onRemoveShot={() => {}}
           screenshot=""
         />
+        <Button isLoading={false} />
       </View>
     </View>
   )
