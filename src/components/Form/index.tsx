@@ -23,8 +23,10 @@ import { feedbackTypes } from '../../utils/feedbackTypes';
 
 interface Props {
   feedbackType: FeedbackTypes;
+  onFeedbackCanceled: () => void;
+  onFeedbackSent: () => void;
 }
-export function Form({ feedbackType }: Props) {
+export function Form({ feedbackType, onFeedbackCanceled, onFeedbackSent }: Props) {
   const [screenshot, setScreenshot] = useState<string | null>(null);
 
   const feedbackTypeInfo = feedbackTypes[feedbackType];
@@ -45,7 +47,7 @@ export function Form({ feedbackType }: Props) {
   return (
     <View style={styles.container}>
       <View style={styles.header}>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={onFeedbackCanceled}>
           <ArrowLeft
             size={24}
             weight="bold"
